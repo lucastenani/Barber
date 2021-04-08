@@ -1,0 +1,468 @@
+* {  
+  transition: all .5s ease;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 95%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  /* position: fixed; */
+  background: #BBBBBB;  
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+
+.container-menu {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-header {
+ display: flex; 
+ align-items: center;
+ justify-content: space-between;
+}
+
+.open-nav {
+  display: none;
+  z-index: 400;
+}
+
+#logo {
+  width: 100%;
+  max-width: 75px;
+}
+
+.logo-img {
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  max-width: 700px;
+}
+
+nav .list-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.menu {
+  z-index: 500;
+}
+
+.menu a {
+  position: relative;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.menu a:hover {
+  color: #c78c19;  
+}
+
+.menu a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #c78c19;
+  left: 0;
+  bottom: 0;
+}
+
+.menu a:hover::before {
+  width: 100%;
+}
+
+/* Main */
+
+main {
+  position: relative;  
+  margin: 40px auto;  
+}
+
+/* Home */
+
+.banner {
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 0 0 1em;
+  clear: left;
+}
+
+.main-content {
+  padding: 3em 0;
+  background: #FEFEFE;
+}
+
+.main-content p {
+  margin: 0 0 1em;
+}
+
+.main-content strong {
+  font-weight: bold;
+}
+
+.main-content em {
+  font-style: italic;
+}
+
+.utensils {
+  width: calc(30% - ((20px * 4) / 4));
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.location {
+  padding: 3em 0;
+  background: linear-gradient(#FEFEFE, #888888 80%);
+}
+
+.location p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.benefits {
+  padding: 3em 0;
+  background: #888888;
+}
+
+.benefits-content {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.benefits-list {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.items {
+  line-height: 1.5;
+}
+
+.items::before {
+  content: "🟊";
+}
+
+.items:first-child {
+  font-weight: bold;
+}
+
+.benefits-img {
+  width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 30px 2px #000000;
+}
+
+.benefits-img:hover {
+  opacity: 0.3;
+}
+
+.video {
+  max-width: 560px;
+  width: 100%;
+  margin: 2em auto;
+}
+
+/* Products */
+
+.products li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 15px;  
+}
+
+.products li:hover {
+  border-color: #c78c19;
+}
+
+.products li:active {
+  border-color: #088c19;
+}
+
+.products h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.products li:hover h2 {
+  font-size: 34px;  
+}
+
+.products .product-description {
+  font-size: 18px;
+  
+}
+
+.products .product-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background: url("../images/bg.jpg");
+  padding: 40px 0;  
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+#footer-logo {
+  height: 100%;
+  max-height: 125px;
+}
+
+/* Form */
+
+form {
+  margin: 40px 0;
+}
+
+form label,
+legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.standard-input {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+  border-radius: 6px;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0px 11px 14px -7px #535950;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.submit {
+  width: 30%;
+	box-shadow: 0px 11px 14px -7px #535950;
+	background:linear-gradient(to bottom, #bbbbbb 5%, #575757 100%);
+	background-color:#bbbbbb;
+	border-radius:6px;
+	border:1px solid #e0e0e0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;	
+	font-size:14px;
+	font-weight:bold;
+	padding: 10px 0px;
+	text-decoration:none;
+  transition: 1s all;
+}
+
+.submit:hover {
+  background:linear-gradient(to bottom, #bbbbbb 5%, #44c767 100%);
+  transform: scale(1.2);
+}
+
+/* table */
+
+table {
+  margin: 20px 0 40px;
+}
+
+thead {
+  background: #555555;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+td, 
+th {
+  border: 1px solid #000000;
+  padding: 8px 15px;
+}
+
+/* Media query */
+@media screen and (max-width: 976px) {
+  .products li {        
+    position: relative;
+    width: 100%;    
+    margin: 5px auto;  
+        
+  }
+
+  .products ul {        
+    margin: 0 auto;
+    position: relative;
+    max-width: 940px;
+    width: 90%;         
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content-header {
+    padding: 0 30px;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background:#bbbbbbc7; 
+  }
+
+  nav .list-menu {
+    flex-direction: column;
+    margin: 0;
+    padding: 110px 0 0 0;
+  }
+
+  nav .list-menu a {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .open-nav {
+    cursor: pointer;
+    position: relative;
+    background: #bbbbbb;
+    display: block;
+    width: 40px;
+    height: 30px;
+    border: 0;
+    z-index: 1000;
+  }
+
+  .open-nav .line { 
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #FFFFFF;
+    left: 0;
+    border-radius: 5px;
+  }
+
+  .open-nav .line.line_1 {
+    top: 0;
+  }
+
+  .open-nav .line.line_2 {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+
+  .open-nav .line.line_3 {
+    bottom: 0;
+  }
+
+  button.open-nav.open .line.line_1{
+    transform: rotate(35deg);
+    transform-origin: left;
+  }
+
+  button.open-nav.open .line.line_2{
+    left: 100%;
+    opacity: 0;
+  }
+
+  button.open-nav.open .line.line_3{
+    transform: rotate(-35deg);
+    transform-origin: left;
+  }
+
+  nav.menu.active  {
+    left: 0;
+  }
+
+  nav li {
+    background: #bbbbbb;
+    width: 100%;
+    height: 29px;
+    text-align: center;    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .benefits-list,
+  .benefits-img {
+    width: 100%;
+  }
+
+  .benefits-img {
+    margin-top: 30px;
+  }
+
+  .standard-input {
+    width: 100%;
+    padding: 10px 2px;
+  }
+}
+
+/* Select only paragraphs that are direct children of main */
+
+/* main > p {
+  background: red;
+} */
+
+/* Select only the first paragraph after an image */
+
+/* img + p {
+  background: blue;
+} */
+
+/* Select all the paragraphs that come after an image */
+
+/* img ~ p {
+  background: yellow;
+} */
+
+/* Select all paragraphs that are not the mission */
+
+/* .main-content p:not(#mission) {
+  background: orange;
+} */
